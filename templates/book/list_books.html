@@ -1,0 +1,18 @@
+<h1>
+    Books:
+</h1>
+
+{% for book in books %}
+<div>
+    <h2>{{ book.title }} - {{ book.rate }}</h2>
+    <p>
+        {{ book.text }}
+    </p>
+    <p>
+        {{ book.created_at }}
+    </p>
+    <a href="/book/{{ book.id }}">Read more</a>
+</div>
+{% endfor %}
+
+
